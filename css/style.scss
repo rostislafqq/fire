@@ -1,0 +1,885 @@
+@import url('../fonts/ScaniaSansCYHeadline/stylesheet.css');
+//Scania Sans CY Headline;
+@import url('../fonts/LabGrotesque/stylesheet.css');
+//Lab Grotesque
+@import url('./null.css');
+@import url('./scroll.css');
+
+$pad123:0 123px;
+@mixin gradHeader{
+    background: linear-gradient(240.22deg, #FFFFFF 30.8%, rgba(255, 255, 255, 0) 150.73%);
+    font-family: 'Lab Grotesque';
+    font-style: normal;
+    font-weight: 250;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+@mixin notesText{
+    font-family: 'Lab Grotesque';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+}
+@mixin comonHeader{
+    font-family: 'Lab Grotesque';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+body{
+    background-color: #000;
+    background: url('../img/bgBody.jpg');
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $pad123;
+    padding-top: 85px;
+    padding-bottom: 81px;
+    .header__logo{
+        display: flex;
+        align-items: center;
+        .header__logoName{
+            font-family: 'Scania Sans CY Headline';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 70px;
+            letter-spacing: 0.105em;
+            color: #fff;
+            margin-right: 40px;
+        }
+        .header__intro{
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.05em;
+            color: #6D6D6D;
+            width: 100px;
+        }
+    }
+    .header__contacts{
+        display: flex;
+        align-items: center;
+        .header__nav{
+            margin-right: 61px;
+            .header__navList{
+                display: flex;
+                align-items: center;
+                .header__navItem:not(:last-child){
+                    margin-right: 45px;
+                }
+                .header__navLink{
+                    font-family: 'Lab Grotesque';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 16px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: #949494
+                }
+                .header__navLink:hover{
+                    color: #FFCF7A;
+                    transition: .3s; 
+                }
+                
+            }   
+        }      
+      
+    }
+    .header__img{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+    
+}
+//2 block
+.automatic{
+   
+    padding: $pad123;
+    position: relative;
+    .automatic__info{
+        
+        .automatic__header{
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 250;
+            font-size: 64px;
+            line-height: 80px;      
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            background: linear-gradient(226.43deg, #FFFFFF 75.37%, rgba(255, 255, 255, 0) 99.78%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            width: 780px;
+            background-clip: text;
+        }
+        .automatic__cost{
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 36px;
+            line-height: 40px;
+            letter-spacing: 0.05em;
+            color: #FFCF7A;
+            margin-top: 29px;
+            .automatic__costFrom{
+                font-size: 20px;
+            }
+        }
+        .automatic__intro{
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            color: #FFFFFF;
+            display: flex;
+            margin-top: 86px;
+        }
+        .automatic__introItem{
+            max-width:120px;
+            .automatic__introText{
+                margin-top: 14px ;
+            }
+        }
+    }
+    .automatic__kamin{
+        position: absolute;
+        z-index: 4;
+        top:60%;
+        right: 0;       
+        transform:translate(-25%, -50%);    
+    }
+  
+}
+//оконек
+.automatic::before{
+  
+    content: url('../img/kamin_2Block.png') ;
+    position: absolute;
+    display: block;
+    width: auto;
+    height: auto;
+    top:0;
+    right: 12%;
+    z-index: 2;
+}
+.automatic::after{
+    content: '' ;
+    position: absolute;
+    display: block;
+    width: 390.34px;
+    height: 163.39px;
+    top:7%;
+    right: 22%;
+    z-index: 0;
+    background: #A74E02;
+    filter: blur(100px);
+    border-radius: 500px;
+    transform: rotate(161.87deg);
+   
+}
+
+//3 block
+.briefInfo{
+    //с радостью бы сделал ccs'ом , но в макете нет стилей.
+    background-image:  url("../img/fireGroups.svg");
+    background-position:50% -10%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+   
+    padding: 0px 75px;
+    padding-top: 242px;
+    .briefInfo__header{
+        width: 674px;
+        margin: 0 auto;
+        .briefInfo__blockHeader{  
+            margin-bottom: 21px;  
+            @include gradHeader  ;    
+            text-align: center;
+        }
+        .briefInfo__info{
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 33px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: #FFFFFF;
+            width: 570px;
+            margin: 0 auto;
+        }
+    }
+    .briefInfo__kamin{
+
+        img{
+
+            width: 100%;
+        }
+    }
+    .briefInfo__intro{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 200px;
+        margin: 0 203px;
+        .briefInfo__introItem{
+            display: flex;
+            align-items: center;
+            .briefInfo__introImg{
+                width: 40px;
+                height: 40px;
+            }
+            .briefInfo__inroText{
+                margin-left: 30px;
+                width: 160px;
+                font-family: 'Lab Grotesque';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24px;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+}
+
+.instruction{
+    padding: 0 227px 0px 206px;
+    color: #fff;
+    display: flex;
+    .instruction__intro{
+        .instruction__header{
+            @include gradHeader;
+            margin-bottom: 23px;
+        }
+        .instruction__introText{
+            max-width: 370px;
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 33px;
+        }
+        .instruction__introText:last-child{
+            margin-top: 57px;
+            max-width: 330px;
+        }
+    }
+    .instruction__howToUse{
+        margin: auto auto -126px 40px;
+        .instruction__howToUseIMG{
+            display: flex;
+            align-items: center;
+            .instruction__stick{
+                width: 31px;
+                height: 1px;
+                background: #949494;
+                margin:0px 17px
+            }
+        }
+        .instruction__howToUseTXT{
+            margin-top: 19px;
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            max-width: 182px;
+        }
+    }
+    .instruction__time{
+        position: relative;
+        padding: 36px;
+        height: 151px;
+        background: radial-gradient(100% 65.98% at 100% 73.18%, #FFFFFF 0.31%, #FFE2A4 59.23%, #FFD47C 100%);
+        border-radius: 50%;
+        text-align: center;
+        .instruction__timeNum{
+            font-family: 'Scania Sans CY';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 20px;
+            color: #000000;
+            max-width: 60px;
+            margin-bottom: 9px;
+            .instruction__timeMinutes{
+               font-size: 18px; 
+            }
+        }
+        .instruction__timeIntro{
+            font-family: 'Scania Sans CY';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 14px;
+            color: #000000;
+            max-width: 79px;
+           
+        }
+    }
+    .instruction__time::after{
+        content: url('../img/groupBlurs.svg');
+        display: block;
+        position: absolute;
+        width: 653px;
+        height: 521px;
+        right:-50%;
+        top:-210%;
+        z-index: -1;
+    }
+    .instruction__time::before{
+        content: url('../img/shlang_Button.png');
+        display: block;
+        position: absolute;
+        width: 484px;
+        height: 481px;
+        right:135%;
+        top:-170%;
+        z-index: -2;
+    }
+}
+.smart{
+    margin-top: 365px;
+    .smart__header{
+        @include gradHeader;
+        text-align: center;
+        margin-bottom: 32px;
+        .smart__stick{
+            width: 31px;
+            height: 1px;
+            margin:auto 45px; 
+            background-color: #949494;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .smart__stations{
+        width: 100%;
+        padding: 0 67px;
+        height: auto;
+        //в макете резко обрывается цвет фона 
+        background: url('../img/smartKamin.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        .smart__intro{
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 33px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .smart__stationContainer{
+            padding: 267px 230px 215px 265px;
+            display: flex;
+            justify-content: space-between;
+            .smart__station{
+                font-family: 'Lab Grotesque';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 33px;
+                text-align: center;
+                color: #464239;
+            }
+        }
+    }
+}
+
+.notes{
+    margin-top: 43px;
+    color:#fff;
+    padding: $pad123;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    .notes__fuel{
+        .notes__header{
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+        .notes__panel{
+            
+            width: fit-content;
+            .notes__panelHeader{
+                @include notesText;
+                border-bottom: 1px solid rgba(255, 207, 122, 0.72);
+                width: fit-content;
+                margin-bottom: 19px;
+                position: relative;
+            }
+            .notes__panelHeader::after{
+                content: '';
+                display: block;
+                position: absolute;
+                transform: rotate(45deg);
+                right: -49px;
+                top: 47.5px;
+                width: 58px;
+                height: 1px;
+                background-color: rgba(255, 207, 122, 0.72);
+            }
+        }
+        .notes__variations{
+            margin-top: 40px;
+             
+            .notes__variationHeader{
+                color: #757575;
+                font-size: 18px;
+                font-family: 'Lab Grotesque';
+                font-style: normal;
+                font-weight: 400;
+            }
+            .notes__variationContainer{
+                display: flex;
+               
+                margin-top: 20px;
+                @include notesText;
+            }
+            .notes__variationContainerPart{
+                max-width: 153px;
+            }
+            .notes__variationContainerPart:first-child{
+                margin-right: 100px;
+            }
+           
+        }
+        .notes__standart{
+            margin-top: 90px;
+            .notes__standartHeader{
+                color: #757575;
+                font-size: 18px;
+                font-family: 'Lab Grotesque';
+                font-style: normal;
+                font-weight: 400;
+            }
+            .notes__standartContainer{
+                display: flex;
+                
+                margin-top: 45px;
+                @include notesText;
+            }
+            .notes__standartContainerPart:first-child{
+                margin-right: 100px;
+            }
+        }
+    }
+    .notes__common{
+        .notes__commonHeader{
+            @include comonHeader;
+            
+        }
+        .notes__commonIntro{
+            @include notesText;
+            margin: 25px 0px 50px 0px ;
+        }
+        .notes__commonIMG{
+            width: 537px;
+            height: 346px;
+            background: #121212;
+            border-radius: 2px;
+            position: relative;
+        }
+        .notes__commonIMG::before{
+            content: url('../img/arrow.svg');
+            display: block;
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            bottom: 45px;
+            left: 40px;
+            cursor: pointer;
+        }
+        .notes__commonIMG::after{
+            content: url('../img/arrow.svg');
+            display: block;
+            position: absolute;
+            transform: rotate(180deg);
+            width: 18px;
+            height: 18px;
+            bottom: 45px;
+            left: 74px;
+            cursor: pointer;
+        }
+    }
+    .notes__commonTwise{
+        margin-top:113px ;
+        .notes__commonIntro{
+            margin-bottom: 37px;
+        }
+    }
+}
+
+//
+.catalog{
+    margin-top: 106px;
+    text-align: center;
+    .catalog__header{
+        font-family: 'Lab Grotesque';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        color: #FFFFFF;
+        margin-bottom: 35px;
+    }
+    .catalog__getIt{
+        font-family: 'Lab Grotesque';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        color: #ECCF94;
+        padding: 15px 63px;
+        border: 1px solid #ECCF94;
+       	background: rgba(0, 0, 0, 0);
+        margin-bottom: 130px;
+    }
+    .catalog__getIt:hover{
+        background:#ECCF94;
+        color: #000;
+        transition: .3s;
+        -webkit-box-shadow: 0px 0px 26px 15px rgba(236,207,148, 0.2);
+        -moz-box-shadow: 0px 0px 26px 15px rgba(236,207,148, 0.2);
+        box-shadow: 0px 0px 26px 15px rgba(236,207,148, 0.2);
+    }
+ 
+}
+
+//
+
+.taskSol{
+    padding: $pad123;
+    .taskSol__commonSection{
+        .taskSol__commonHeader{
+            @include gradHeader();
+            text-align: center;
+        }
+        .taskSol__sqContainer{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 45px;
+            .taskSol__sq{
+                width: 370px;
+                height: 267px;
+                background: #121212;
+                border-radius: 2px;
+            }
+        }
+    }
+    .taskSol__commonSection:last-child{
+        margin-top: 90px;
+    }
+}
+
+//
+.constructor{
+    margin-top: 94px;
+    padding: $pad123;
+    padding-bottom: 89px;
+    .constructor__commonHeader{
+        font-family: 'Lab Grotesque';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 55px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .constructor__header{
+        @include gradHeader;
+        text-align: center;
+        margin-bottom: 67px;
+    }
+    .constructor__main{
+        display: flex;
+        justify-content: space-between;
+        
+        .constructor__mainInter{
+            .constructor__sliderContainer{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                .constructor__widthKamin{
+                    font-family: 'Lab Grotesque';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 55px;
+                    color: #FFFFFF;
+                    width: 65px;
+                }
+                .constructor__slider{
+                    -webkit-appearance: none;
+                    width: 410px;
+                    height: 2px;
+                    background: #FFCF7A;
+                    outline: none;
+                    margin: 0 40px;
+
+                }
+                .constructor__slider::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 30px;
+                    height: 30px;
+                    background: #FFCF7A;
+                    border-radius: 2px;
+                    cursor: pointer;
+                }              
+            }
+            .constructor__panelContainer{
+                width: fit-content;
+                margin-top:4px;
+                .constructor__panelItem{
+                    display: flex;
+                    align-items: center;
+                    .constructor__arrow{
+                        cursor: pointer;
+                    }
+                    .constructor__arrow:last-child{
+                        transform: rotate(180deg);
+                    }
+                    .constructor__panel{
+                        margin: 0 22px;
+                    }
+                }
+                .constructor__bullets{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 16px;
+                    .constructor__bullet{
+                        width: 9px;
+                        height: 1px;
+                        background-color: #464239;
+                        cursor: pointer;
+                    }
+                    .constructor__bullet--active{
+                        background-color: #FFCF7A;
+                    }
+                    .constructor__bullet:not(:last-child){
+                        margin-right: 4px;
+                        
+                    }
+                }
+            }
+            .constructor__functions{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                max-width: 570px;
+                .constructor__label{
+                    display: flex;
+                    align-items: center;
+                    .constructor__function{
+                        font-family: 'Lab Grotesque';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 30px;
+                        color: #FFFFFF;
+                        padding-right: 86px; 
+                    }
+                    .constructor__chek{
+                        position: absolute;
+                        z-index: -1;
+                        opacity: 0;
+                    }
+                    .constructor__chek + .constructor__newChek {
+                        display: inline-flex;
+                        align-items: center;
+                        user-select: none;
+                        cursor: pointer;
+                      }
+                      .constructor__chek+ .constructor__newChek::before {
+                        content: '';
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid #ECCF94;
+                        margin-right: 5px;
+                        border-radius: 2px;
+                      }
+                      .constructor__chek:checked + .constructor__newChek::before {
+                        border: 1px solid #cacaca;
+                        background: url('../img/add.svg') center no-repeat #ECCF94;
+                        border-color:  #ECCF94;;
+                      }
+                }
+            }
+        }
+    }
+    .constructor__result{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 68px;
+        align-items: center;
+        .constructor__resultContent{
+            .constructor__length{
+                font-family: 'Lab Grotesque';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                color: #FFFFFF;
+            }
+           .constructor__circle{
+            width: 28px;
+            height: 28px;
+            background: #B8542A;
+            border-radius: 50%;
+           }
+           .constructor__cost{
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 36px;
+            letter-spacing: 0.05em;                    
+            color: #FFCF7A;
+            
+           }
+        }
+        .constructor__request{
+            padding: 15px 55px;
+            font-family: 'Lab Grotesque';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            color: #ECCF94;
+            border: 1px solid #ECCF94;
+       	    background: rgba(0, 0, 0, 0);
+        }
+        .constructor__request:hover{
+            background:#ECCF94;
+            color: #000;
+            transition: .3s;
+            -webkit-box-shadow: 0px 0px 26px 15px rgba(236,207,148, 0.2);
+            -moz-box-shadow: 0px 0px 26px 15px rgba(236,207,148, 0.2);
+            box-shadow: 0px 0px 26px 15px rgba(236,207,148, 0.2);
+        }
+    }
+}
+
+//
+.footer{
+  background: #121212;
+  padding:72px 123px 0px 123px;
+    .footer__callUs{
+        margin-bottom: 71px;
+        @include gradHeader()
+    }
+    .footer__contacts{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 68px;
+        border-bottom: 1px solid #232323;
+        .footer__contactContainer{
+            .footer__commonHeader{
+                font-family: 'Lab Grotesque';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 36px;
+                color: #949494;
+            }
+            .footer__commonText{
+                font-family: 'Lab Grotesque';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 22px;
+                line-height: 36px;
+                color: #FFFFFF
+            }
+            .footer__linkItem:hover{
+                color: #FFCF7A;
+            }
+            .footer__linkItemNum{
+                font-family: 'Lab Grotesque';
+                font-style: normal;
+                font-weight: 250;
+                font-size: 36px;
+                line-height: 33px;
+            }
+            .footer__btn{
+                padding: 14px 33px;
+                background-color: transparent;
+                color: #fff;
+                border: 1px solid #CEB787;
+                border-radius: 2px;
+                font-family: 'Lab Grotesque';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 30px;
+                text-align: center;
+            }
+            .footer__btn:hover{
+                background:#ECCF94;
+                color: #000;
+                transition: .3s;
+                -webkit-box-shadow: 0px 0px 26px 15px rgba(236,207,148, 0.2);
+                -moz-box-shadow: 0px 0px 26px 15px rgba(236,207,148, 0.2);
+                box-shadow: 0px 0px 26px 15px rgba(236,207,148, 0.2);
+            }
+            .footer__second{
+                margin-top: 60px;
+            }
+        }
+    }
+    .footer__bottom{
+        padding-top:15px;
+        padding-bottom: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Lab Grotesque';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.05em;
+        color: #6D6D6D;
+        .footer__company{
+            display: flex;
+            align-items: center;
+            .footer__logo{
+                font-family: 'Scania Sans CY Headline';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 70px;
+                letter-spacing: 0.105em;
+                color: #FFFFFF;
+                margin-right: 110px;
+            }
+            .footer__date{
+                margin-right: 47px;
+            }
+
+        }
+     
+    }
+}
